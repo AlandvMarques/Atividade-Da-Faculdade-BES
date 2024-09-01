@@ -4,30 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Formulário de Contato</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #E2E8DD; /* Cor de fundo clara */
+            background-color: #E2E8DD;
         }
         header {
-            background-color: #95A3A4; /* Cor mais suave para o cabeçalho */
+            background-color: #95A3A4;
             color: white;
             padding: 20px 0;
             text-align: center;
             margin-bottom: 30px;
         }
         footer {
-            background-color: #95A3A4; /* Mesma cor do cabeçalho para consistência */
+            background-color: #95A3A4;
             color: white;
-            padding: 15px 0; /* Aumentado para mais espaço */
+            padding: 15px 0;
             text-align: center;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
         .form-section {
-            background-color: #B7D1DA; /* Fundo do formulário mais neutro */
+            background-color: #B7D1DA;
             padding: 30px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,28 +34,27 @@
             margin: 0 auto;
         }
         .form-control {
-            border: 1px solid #697268; /* Cor da borda dos campos */
+            border: 1px solid #697268;
         }
         .btn-primary {
-            background-color: #4E5340; /* Cor do botão consistente com o esquema de cores */
+            background-color: #4E5340; 
             border-color: #4E5340;
-            color: #E2E8DD; /* Texto do botão */
+            color: #E2E8DD;
         }
         .btn-primary:hover {
-            background-color: #697268; /* Cor ao passar o mouse */
+            background-color: #697268;
             border-color: #697268;
         }
         h1 {
-            font-size: 2em; /* Aumenta o tamanho do texto do cabeçalho */
+            font-size: 2em;
         }
         label {
-            font-weight: bold; /* Negrito para os rótulos */
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <h1>Meu Formulário de Contato</h1>
     </header>
@@ -84,7 +82,7 @@
         </form>
     </div>
 
-    <!-- Modal de Confirmação -->
+    <!-- Modal-->
     <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -104,28 +102,22 @@
         </div>
     </div>
 
-    <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
-    <!-- Script de Validação -->
     <script>
         function validateAndShowModal() {
-            // Valida se todos os campos obrigatórios estão preenchidos
             var form = document.getElementById('contactForm');
             if (form.checkValidity()) {
                 // Se estiverem preenchidos, exibe o modal
                 $('#confirmationModal').modal('show');
-                // Limpa os campos do formulário após exibir o modal
                 form.reset();
             } else {
-                // Se não, exibe a mensagem de validação padrão
                 form.reportValidity();
             }
         }
